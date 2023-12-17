@@ -1,0 +1,51 @@
+.section-cards {
+    justify-content: center;
+}
+.size-name {
+    width: 300px;
+    color: var(--colorOrange)
+}
+.card{
+    width: fit-content !important;
+    background-color: rgba(128, 138, 154, 0.5);
+    color:rgb(17, 16, 16);
+}
+.card>img{
+    width: 100%;
+
+}
+
+.list-group{
+    width: 350px!important;
+}
+.list-group-item{
+    background-color: transparent !important;
+    color: whitesmoke !important;
+    font-size: 1.2rem;
+    
+}
+.list-group-item:hover{
+    background-color: #9fa2a1 !important;
+    color: #344D67!important;
+    cursor: pointer;
+}
+
+@media(max-width:800px){
+    .more-info-section{
+        padding: 1rem!important;
+    }
+}
+@media(max-width:500px){
+    .card{
+        flex-direction: column!important;
+    }
+    .btn-x-md{
+        visibility: hidden;
+    }
+    .btn-x-sm{
+        display: block!important;
+    }
+    .list-group-item{
+        width: 100%;
+    }
+}

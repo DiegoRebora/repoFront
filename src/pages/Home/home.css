@@ -1,0 +1,13 @@
+
+
+.home{
+    position:absolute;  
+    padding-left: 15%;
+}
+
+.home-title {
+    color: var(--colorOrange);
+    margin-left: 10px;
+    font-family: 'Black Ops One'; 
+  }
+

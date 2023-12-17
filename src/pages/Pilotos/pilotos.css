@@ -1,0 +1,23 @@
+
+.section-cards {
+    justify-content: center;
+}
+
+
+.collapse:not(.show) {
+    display: flex;
+}
+
+
+@media(max-width:800px){
+
+    .collapse:not(.show) {
+        display: none;
+    }
+    .bi-sliders {
+        display:block
+
+    }
+
+
+}
