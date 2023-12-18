@@ -1,3 +1,10 @@
+.pilotos-div{
+    background-image:  url("../../../public/images/race-track.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 .titulo {
     margin-bottom: 5px;
 }

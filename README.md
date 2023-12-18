@@ -72,10 +72,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 PARA SEGUIR: 
 -Mejorar estilo de los botones.
 -Cambiar botón de elementos cargados.
--Formulario, no responsive los inputs.
--Login : que se muestren los botones de "agregar".
+-Formulario, no responsive los inputs. Chequear style de las tarjetas, para que el formulario se parezca más.
+-Login : que se muestren los botones de "agregar"  y editar/borrar para admin.
 -Funcionalidades: borrar, editar y agregar imagen. 
 -Bycript si queda tiempo. 
--Poner más lindo. 
+-Poner más lindo. Foto de fondo? 
 --OPCIONALES:
-    -Carrera: Que muestre las posiciones o al menos el podio. 
+    -Carrera: Que muestre las posiciones o al menos el podio. Se puede, con un Json. 

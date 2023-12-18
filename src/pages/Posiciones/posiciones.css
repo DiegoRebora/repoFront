@@ -5,11 +5,16 @@
     justify-content: center;
     height: 100vh; 
     background-color: var(--colordarkGray);
+    background-image:  url("../../../public/images/many-karts.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 .table-container {
     width: 100%;
     overflow-x: auto; 
+    opacity: 0.98;
 }
 
 

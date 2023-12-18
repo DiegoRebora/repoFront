@@ -11,7 +11,7 @@ export default function Card({nombre, apellido, imagen, edad, apodo }) {
         <div className="card m-2 p-2 d-flex flex-row justify-content-between align-items-center">
           <div className="d-flex flex-column justify-content-between align-items-center">
             <img src={imagen} alt="imagen-piloto"/>
-            <h2 className="size-name text-center">{nombre}</h2>
+            <h2 className="text-center">{nombre} {apellido}</h2>
               <button  onClick={()=> setShow(true)} className={show?"btn btn-active align-self-end more d-none":"btn btn-active align-self-end more d-block"}>+ INFO</button>
              <div className="edit-delete align-items-start d-none">  
                <i className="bi bi-trash3"></i>

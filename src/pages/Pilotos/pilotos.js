@@ -32,10 +32,10 @@ export default function Pilotos() {
   return (
     <Fragment>
       <Nav itemMenu={"Pilotos"} />
-      <main className='container-fluid justify-content-center align-items-center'>
+      <main className='container-fluid pilotos-div justify-content-center align-items-center'>
         <h2 className="titulo row suyai-text justify-content-center align-items-center py-5 ">Pilotos</h2>
         <div className="formulario d-flex flex-column w-100 justify-content-center align-items-center">
-           <button onClick={()=> setShow(!show)} className="agregar nav-link botonav p-2 ">+ Piloto</button>
+           <button onClick={()=> setShow(!show)} className="agregar nav-link botonav p-2 d-none">+ Piloto</button>
            {show? <FormPilotos/> : ''}
         </div>
         <section className="row section-cards">
