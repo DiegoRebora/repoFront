@@ -1,0 +1,25 @@
+.posiciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    padding-top: 50px;
+    background-color: var(--colordarkGray);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; 
+}
+
+
+table {
+    width: 100%;
+    max-width: 800px;
+}
+
+
+th, td {
+    text-align: center;
+}
