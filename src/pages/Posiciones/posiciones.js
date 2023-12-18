@@ -32,8 +32,7 @@ export default function Posiciones() {
     return(
         <Fragment>
             <Nav itemMenu={"Posiciones"}/>
-            <main className='container-fluid'>
-              <div className="posiciones justify-content-center align-items-center">
+            <main className='container-fluid posiciones justify-content-center align-items-center'> 
                 <h2 className="row suyai-text justify-content-center align-items-center py-5">Posiciones</h2>
                   <section className="table-container">
                     <div className="d-flex flex-column justify-content-between align-items-center">
@@ -59,7 +58,7 @@ export default function Posiciones() {
                         </table> 
                     </div>
                 </section>
-            </div>
+            
             </main>
 
         </Fragment>

@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+--------------------------------------------
+PARA SEGUIR: 
+-Mejorar estilo de los botones.
+-Cambiar botón de elementos cargados.
+-Formulario, no responsive los inputs.
+-Login : que se muestren los botones de "agregar".
+-Funcionalidades: borrar, editar y agregar imagen. 
+-Bycript si queda tiempo. 
+-Poner más lindo. 
+--OPCIONALES:
+    -Carrera: Que muestre las posiciones o al menos el podio. 

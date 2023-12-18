@@ -2,9 +2,12 @@ import React, { useState, useEffect, Fragment } from 'react';
 import './pilotos.css';
 import Nav from '../../components/Nav/nav.js';
 import Card from '../../components/Card/card.js';
+import FormPilotos from "../../components/Form/formPilotos.js"
 
 export default function Pilotos() {
   const [pilotos, setPilotos] = useState([]);
+  const [show, setShow] = useState(false)
+
 
   const fetchPilotos = async () => {
     try {
@@ -29,8 +32,12 @@ export default function Pilotos() {
   return (
     <Fragment>
       <Nav itemMenu={"Pilotos"} />
-      <main className='container-fluid'>
-        <h2 className="row suyai-text justify-content-center align-items-center py-5 ">Pilotos</h2>
+      <main className='container-fluid justify-content-center align-items-center'>
+        <h2 className="titulo row suyai-text justify-content-center align-items-center py-5 ">Pilotos</h2>
+        <div className="formulario d-flex flex-column w-100 justify-content-center align-items-center">
+           <button onClick={()=> setShow(!show)} className="agregar nav-link botonav p-2 ">+ Piloto</button>
+           {show? <FormPilotos/> : ''}
+        </div>
         <section className="row section-cards">
           {pilotos.map((piloto) => (
             <Card

@@ -1,4 +1,14 @@
+.titulo {
+    margin-bottom: 5px;
+}
 
+.navlink{
+    border-radius: var(--bs-nav-pills-border-radius);
+}
+.agregar {
+    margin-bottom: 25px;
+    border-radius: 8%;
+}
 .section-cards {
     justify-content: center;
 }

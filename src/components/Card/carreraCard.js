@@ -22,6 +22,10 @@ export default function CarreraCard({nombre_carrera, fecha, corredores }) {
                 <h4>Corredores:</h4>
                 <span className="fw-bold">{corredores}</span></li>
             </ul>
+            <div className="edit-delete align-items-start d-none">  
+               <i className="bi bi-trash3"></i>
+               <i className="bi bi-pencil-square"></i>
+             </div>
 
           </div>
 

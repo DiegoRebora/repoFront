@@ -1,0 +1,13 @@
+.formpilotos {
+    justify-content: center;
+    align-items: center;
+    color: var(--colorWhite);
+    background-color: grey;
+    border-radius: 6%;
+    margin-bottom: 15px;
+}
+
+.form {
+    border-radius: 6%;
+    background-color: var(--colorOrange);
+}

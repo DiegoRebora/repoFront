@@ -1,12 +1,13 @@
 import Nav from '../../components/Nav/nav.js'
-import './carreras.css'
 import React, { useState, useEffect, Fragment } from 'react';
 import '../Pilotos/pilotos.css';
 import CarreraCard from '../../components/Card/carreraCard.js';
+import FormCarreras from '../../components/Form/formCarreras.js';
 
 export default function Carreras() {
 
     const [carreras, setCarreras] = useState([]);
+    const [show, setShow] = useState(false);
 
     useEffect(() => {
         const fetchCarreras = async () => {
@@ -32,8 +33,12 @@ export default function Carreras() {
         <Fragment>
             <Nav itemMenu={"Carreras"}/>
             <main className='container-fluid'>
-                <h2 className="row suyai-text justify-content-center align-items-center py-5">Carreras</h2>
+                <h2 className="titulo row suyai-text justify-content-center align-items-center py-5">Carreras</h2>
                 <section className="row section-cards">
+                <div className="formulario d-flex flex-column w-100 justify-content-center align-items-center">
+                <button onClick={()=> setShow(!show)} className="agregar nav-link botonav p-2 ">+ Carreras</button>
+                  {show? <FormCarreras/> : ''}
+               </div>
                     {carreras.map((carrera) => (
                         <CarreraCard
                         key={carrera.id_carrera}
