@@ -11,3 +11,9 @@
     border-radius: 6%;
     background-color: var(--colorOrange);
 }
+.formpilotos input,
+.form input {
+    width: 75%;
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
+}

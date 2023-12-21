@@ -5,15 +5,20 @@
     width: 300px;
     color: var(--colorOrange)
 }
+
 .card{
     width: fit-content !important;
     background-color: #212529;
     opacity: 0.93;
-    color: whitesmoke;
+    color: rgb(123, 133, 172);
+    font-size: x-small;
+    
 }
-.card>img{
-    width: 100%;
-
+.img-card {
+    max-width:150px;
+    max-height:150px;
+    width: auto;
+    height: auto;
 }
 
 .list-group{
@@ -30,11 +35,29 @@
     color: #344D67!important;
     cursor: pointer;
 }
-
+.btn-info {
+    background-color: #9fa2a1;
+    color: white;
+    font-size: small;
+    margin-right: 10px;
+    width: 150px;
+}
+.btn-info:hover {
+        background-color: var(--colorOrange);
+}
+.btn-del {
+    background-color: transparent;
+    margin-top: 5px;
+}
+.btn-del:hover {
+    background-color: var(--colorOrange);
+}
+ 
 .bi {
  color: white;
  padding-left: 25px;
  padding-right: 25px;
+ box-sizing: content-box;
 }
 
 @media(max-width:800px){

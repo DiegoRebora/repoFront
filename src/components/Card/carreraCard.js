@@ -22,13 +22,16 @@ export default function CarreraCard({nombre_carrera, fecha, corredores }) {
                 <h4>Corredores:</h4>
                 <span className="fw-bold">{corredores}</span></li>
             </ul>
-            <div className="edit-delete align-items-start d-none">  
-               <i className="bi bi-trash3"></i>
-               <i className="bi bi-pencil-square"></i>
-             </div>
-
+          
+            <div className="edit-delete-info">
+                <button className="btn-del align-self-end">
+                    <i className="bi bi-trash3"></i>
+                </button>
+                <button className="btn-del align-self-end">
+                    <i className="bi bi-pencil-square"></i>
+                </button>
+            </div>          
           </div>
-
       </div>
 
     )

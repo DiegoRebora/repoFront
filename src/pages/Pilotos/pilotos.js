@@ -23,7 +23,10 @@ export default function Pilotos() {
   useEffect(() => {
     const fetchData = async () => {
       const resultado = await fetchPilotos();
+      console.log(resultado)
       setPilotos(resultado);
+
+      
     };
 
     fetchData();
@@ -42,9 +45,10 @@ export default function Pilotos() {
           {pilotos.map((piloto) => (
             <Card
               key={piloto.id_piloto}
+              id_piloto={piloto.id_piloto}
+              img={piloto.img}
               nombre={piloto.nombre}
               apellido={piloto.apellido}
-              imagen={piloto.img}
               edad={piloto.edad}
               apodo={piloto.apodo}
             />

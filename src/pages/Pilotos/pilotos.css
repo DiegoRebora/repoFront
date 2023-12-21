@@ -14,7 +14,13 @@
 }
 .agregar {
     margin-bottom: 25px;
-    border-radius: 8%;
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #9fa2a1; /* Fondo verde */
+    color: rgb(137, 8, 8); /* Texto blanco */
+    padding: 10px 20px; /* Ajusta el tamaño */
+    font-size: 16px;
+    cursor: pointer;
+    align-self: start
 }
 .section-cards {
     justify-content: center;

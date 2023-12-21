@@ -1,6 +1,6 @@
 export default function InfoCard ({nombre,apellido,edad,apodo,setShow}) {
     return (
-        <div className= "d-flex p-5 flex-column align-items-center learnmore-section">
+        <div className= "d-flex p-1 flex-column align-items-center learnmore-section">
             
             <button className= "btn btn-active d-flex align-self-end m-2 btn-x-sm" onClick={()=>setShow(false)}>X</button>
             
