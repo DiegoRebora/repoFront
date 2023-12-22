@@ -2,7 +2,7 @@ import './card.css'
 import InfoCard from '../InfoCard/infocard'
 import { useState, Fragment } from 'react'
 
-export default function Card({ id_piloto, nombre, apellido, edad, apodo, img }) {
+export default function Card({ id_piloto, nombre, apellido, edad, apodo, img, setPilotoEliminado}) {
     const [show, setShow] = useState(false)
   
   //const[nopiloto, setNopiloto] = useState(false)
@@ -18,6 +18,10 @@ export default function Card({ id_piloto, nombre, apellido, edad, apodo, img }) 
           body: JSON.stringify({ id_piloto: id })
       })
       .then((data)=>{return data.json()})
+      .then(()=> setPilotoEliminado(true))
+      .then(()=>setTimeout(() => {
+        setPilotoEliminado(false);
+      }, 3000))
       .catch((err)=>console.log(err));
       console.log(respuesta);
      return respuesta
@@ -32,7 +36,7 @@ export default function Card({ id_piloto, nombre, apellido, edad, apodo, img }) 
             <h2 className="text-center text-card">{nombre} {apellido}</h2>
             <div className="edit-delete-info">
                         <button onClick={() => setShow(true)} className={show ? "btn-info align-self-end d-none" : "btn-info align-self-end more d-block"}>+ INFO</button>
-                        <button onClick={eliminarPiloto} className="btn-del align-self-end">
+                        <button onClick={() => {eliminarPiloto(); setPilotoEliminado(true);}}className="btn-del align-self-end">
                             <i className="bi bi-trash3"></i>
                         </button>
                         <button className="btn-del align-self-end">

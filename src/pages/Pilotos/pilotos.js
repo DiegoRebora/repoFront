@@ -6,7 +6,8 @@ import FormPilotos from "../../components/Form/formPilotos.js"
 
 export default function Pilotos() {
   const [pilotos, setPilotos] = useState([]);
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
+  const [pilotoEliminado, setPilotoEliminado] = useState(false);
 
 
   const fetchPilotos = async () => {
@@ -32,9 +33,20 @@ export default function Pilotos() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const resultado = await fetchPilotos();
+      console.log(resultado)
+      setPilotos(resultado)};
+    if (pilotoEliminado === true) {
+      fetchData() 
+    }
+  }, [pilotoEliminado]);
+
   return (
     <Fragment>
       <Nav itemMenu={"Pilotos"} />
+      { pilotoEliminado === false? (
       <main className='container-fluid pilotos-div justify-content-center align-items-center'>
         <h2 className="titulo row suyai-text justify-content-center align-items-center py-5 ">Pilotos</h2>
         <div className="formulario d-flex flex-column w-100 justify-content-center align-items-center">
@@ -51,10 +63,14 @@ export default function Pilotos() {
               apellido={piloto.apellido}
               edad={piloto.edad}
               apodo={piloto.apodo}
+              setPilotoEliminado={setPilotoEliminado}
             />
           ))}
         </section>
-      </main>
+      
+      </main> 
+       ): ( <p className='alert-success text-white text-center'> Piloto eliminado!!</p> 
+      )}
     </Fragment>
   );
 }
