@@ -27,6 +27,7 @@ export default function FormCarreras () {
     <Fragment>
         {show?
         <form className="formpilotos d-flex flex-column w-25 gap-2" onSubmit={(event)=>cargarCarrera(event)} >
+            <button className= "btn btn-active d-flex align-self-end m-2 btn-x-sm" onClick={()=>setShow(false)}>X</button>
             <label htmlFor="nombre">Nombre</label>
             <input type="text" id="nombre_carrera" name="nombre_carrera"/>
             <label htmlFor="apellido">Fecha</label>

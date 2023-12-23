@@ -37,7 +37,7 @@ export default function Carreras() {
                 <h2 className="titulo row suyai-text justify-content-center align-items-center py-5">Carreras</h2>
                 <section className="row section-cards">
                 <div className="formulario d-flex flex-column w-100 justify-content-center align-items-center">
-                <button onClick={()=> setShow(!show)} className="agregar nav-link botonav p-2 d-none">+ Carreras</button>
+                <button onClick={()=> setShow(!show)} className="agregar btn-del p-2 ">Agregar Carreras</button>
                   {show? <FormCarreras/> : ''}
                </div>
                     {carreras.map((carrera) => (

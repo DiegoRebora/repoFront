@@ -69,13 +69,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 --------------------------------------------
-PARA SEGUIR: 
--Mejorar estilo de los botones.
--Cambiar botón de elementos cargados.
--Formulario, no responsive los inputs. Chequear style de las tarjetas, para que el formulario se parezca más.
--Login : que se muestren los botones de "agregar"  y editar/borrar para admin.
--Funcionalidades: borrar, editar y agregar imagen. 
--Bycript si queda tiempo. 
--Poner más lindo. Foto de fondo? 
+1.PARA SEGUIR: 
+1.1. BASICO PARA CUMPLIR:
+    -Funcionalidades: cargar y editar (POST/PUT ver clase 20 y/o 21)
+        Ver tema formularios, usar el mismo formulario. 
+1.2 AVANZADO: 
+    -Configurar JWT para que el admin solo vea los botones del CRUD.  //HACER ESTO ANTES DEL LUNES!!!!!!! 
+
+--------------SECUNDARIO- ESTILOS
+
+-Cambiar botón de elementos cargados. 
+-Que cuando uno elige CERRAR el formulario, no se muestre el botón de cargado correctamente. 
+-Estilo piloto eliminado? 
+-Que cuando se edite, recargue la página en ambos. 
+
+ DEPLOY :
+
+ 
+-Crear archivo por .env (a la hora aprox, de la última clase)
+-Subir API (const port=process.env.PORT || 4000) Utilizar Render --Built command = $ npm install // 
+Start command: node server.js// Dentro de render, en "envirorment" cargamos la varibale de entorno. 
+Después voy a "Logs" --MANUAL DEPLOY//
+Luego, en las peticiones, ponemos la dirección del endpoint que nos dio la API. 
+Lo mismo, con las imagenes, hay que cambiarle todas las direcciónes
+--DEPLOY DE API -- NETLIFY - POST BREAK ÚLTIMA CLASE. 
 --OPCIONALES:
-    -Carrera: Que muestre las posiciones o al menos el podio. Se puede, con un Json. 
+
+    -Carrera: Que muestre las posiciones o al menos el podio. Se puede, con un Json.

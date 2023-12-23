@@ -21,6 +21,8 @@ export default function Pilotos() {
     }
   };
 
+
+
   useEffect(() => {
     const fetchData = async () => {
       const resultado = await fetchPilotos();
@@ -43,6 +45,7 @@ export default function Pilotos() {
     }
   }, [pilotoEliminado]);
 
+
   return (
     <Fragment>
       <Nav itemMenu={"Pilotos"} />
@@ -50,7 +53,7 @@ export default function Pilotos() {
       <main className='container-fluid pilotos-div justify-content-center align-items-center'>
         <h2 className="titulo row suyai-text justify-content-center align-items-center py-5 ">Pilotos</h2>
         <div className="formulario d-flex flex-column w-100 justify-content-center align-items-center">
-           <button onClick={()=> setShow(!show)} className="agregar nav-link botonav p-2 d-none">+ Piloto</button>
+           <button onClick={()=> setShow(!show)} className="agregar btn-del p-2">Agregar Piloto</button>
            {show? <FormPilotos/> : ''}
         </div>
         <section className="row section-cards">
@@ -69,7 +72,7 @@ export default function Pilotos() {
         </section>
       
       </main> 
-       ): ( <p className='alert-success text-white text-center'> Piloto eliminado!!</p> 
+       ): ( <h2 className='alert-success suyai-text text-center'> Piloto eliminado!!</h2> 
       )}
     </Fragment>
   );
