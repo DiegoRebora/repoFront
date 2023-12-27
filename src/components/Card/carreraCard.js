@@ -2,13 +2,22 @@ import './card.css'
 import FormCarreras from '../Form/formCarreras'
 import { useState } from 'react';
 
-export default function CarreraCard({nombre_carrera, fecha, corredores }) {
-    console.log("CarreraCard props:", { nombre_carrera, fecha, corredores });
+export default function CarreraCard({nombre_carrera, fecha, corredores, id_carrera, setExitoCarr}) {
     const [showEdit, setShowEdit] = useState(false);
+    const carreraInfo={
+      id_carrera,
+      nombre_carrera,
+      fecha,
+      corredores,
+    }
+
+    const editarCarrera =()=>{
+        localStorage.setItem("infoCarrera", JSON.stringify(carreraInfo))
+    }
 
     return (
         showEdit ? (
-            <FormCarreras />
+            <FormCarreras setExitoCarr={setExitoCarr} editarCarrera={editarCarrera} />
         ) : (
             <div className="card m-2 p-2 d-flex flex-row justify-content-between align-items-center">
                 <div className="d-flex flex-column justify-content-between align-items-center">
@@ -29,7 +38,7 @@ export default function CarreraCard({nombre_carrera, fecha, corredores }) {
                     </ul>
 
                     <div className="edit-delete-info">
-                        <button  onClick={() => { setShowEdit(true)}} className="btn-del align-self-end">
+                    <button onClick={() => { setShowEdit(true); editarCarrera()}} className="btn-del align-self-end">
                             <i className="bi bi-pencil-square"></i>
                         </button>
                     </div>

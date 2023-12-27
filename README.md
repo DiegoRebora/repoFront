@@ -71,21 +71,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 --------------------------------------------
 1.PARA SEGUIR: 
 1.1. BASICO PARA CUMPLIR:
-    -Funcionalidades: cargar y editar (POST/PUT ver clase 20 y/o 21)
-        Ver tema formularios, usar el mismo formulario. 
+    -Funcionalidades: cargar y editar
+         Ver tema formData y target en el formulario del post de la carrera. NO ANDA, SHORO
 1.2 AVANZADO: 
-    -Configurar JWT para que el admin solo vea los botones del CRUD.  //HACER ESTO ANTES DEL LUNES!!!!!!! 
+    -Configurar JWT para que el admin solo vea los botones del CRUD.  //HEEEECHOOOO -- FALTA EL FRONT, AGREGAR FORMULARIOS
+    DE LOGGEO Y DE REGISTRO.--- FALTA TODO ESTO
 
 --------------SECUNDARIO- ESTILOS
 
--Cambiar botón de elementos cargados. 
--Que cuando uno elige CERRAR el formulario, no se muestre el botón de cargado correctamente. 
--Estilo piloto eliminado? 
--Que cuando se edite, recargue la página en ambos. 
 
  DEPLOY :
 
- 
+
 -Crear archivo por .env (a la hora aprox, de la última clase)
 -Subir API (const port=process.env.PORT || 4000) Utilizar Render --Built command = $ npm install // 
 Start command: node server.js// Dentro de render, en "envirorment" cargamos la varibale de entorno. 

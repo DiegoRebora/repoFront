@@ -7,7 +7,7 @@ import FormPilotos from "../../components/Form/formPilotos.js"
 export default function Pilotos() {
   const [pilotos, setPilotos] = useState([]);
   const [show, setShow] = useState(false);
-  const [pilotoEliminado, setPilotoEliminado] = useState(false);
+  const [exito, setExito] = useState(false);
 
 
   const fetchPilotos = async () => {
@@ -25,36 +25,26 @@ export default function Pilotos() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const resultado = await fetchPilotos();
-      console.log(resultado)
-      setPilotos(resultado);
-
-      
+      if (!exito) {
+        const resultado = await fetchPilotos();
+        console.log(resultado)
+        setPilotos(resultado);
+      }
     };
-
+  
     fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const resultado = await fetchPilotos();
-      console.log(resultado)
-      setPilotos(resultado)};
-    if (pilotoEliminado === true) {
-      fetchData() 
-    }
-  }, [pilotoEliminado]);
+  }, [exito]);
 
 
   return (
     <Fragment>
       <Nav itemMenu={"Pilotos"} />
-      { pilotoEliminado === false? (
+      { exito === false? (
       <main className='container-fluid pilotos-div justify-content-center align-items-center'>
         <h2 className="titulo row suyai-text justify-content-center align-items-center py-5 ">Pilotos</h2>
         <div className="formulario d-flex flex-column w-100 justify-content-center align-items-center">
-           <button onClick={()=> setShow(!show)} className="agregar btn-del p-2">Agregar Piloto</button>
-           {show? <FormPilotos/> : ''}
+           <button onClick={()=>{setShow(!show); localStorage.removeItem("infoPiloto");}} className="agregar btn-del p-2">Agregar Piloto</button>
+           {show? <FormPilotos setExito={setExito}/> : ''}
         </div>
         <section className="row section-cards">
           {pilotos.map((piloto) => (
@@ -66,13 +56,15 @@ export default function Pilotos() {
               apellido={piloto.apellido}
               edad={piloto.edad}
               apodo={piloto.apodo}
-              setPilotoEliminado={setPilotoEliminado}
+              setExito={setExito}
+              
+
             />
           ))}
         </section>
       
       </main> 
-       ): ( <h2 className='alert-success suyai-text text-center'> Piloto eliminado!!</h2> 
+       ): ( <h2 className='cartel alert-success suyai-text text-center'>Acción realizada con éxito!</h2> 
       )}
     </Fragment>
   );
