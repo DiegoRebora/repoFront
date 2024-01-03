@@ -12,12 +12,13 @@ const cargarCarrera=async(e)=>{
     let fetchConfig = {};
 
     if (metodo === "post"){
-        formInfo= new FormData(e.target)
+        formInfo=JSON.stringify(formData)
         console.log(e)
         console.log(formInfo)
 
         fetchConfig={
             method:metodo,
+            headers:{"Content-type": "application/json"},
             body:formInfo,
         }
 

@@ -2,13 +2,34 @@ import './card.css'
 import FormCarreras from '../Form/formCarreras'
 import { useState } from 'react';
 
-export default function CarreraCard({nombre_carrera, fecha, corredores, id_carrera, setExitoCarr}) {
+export default function CarreraCard({nombre_carrera, fecha, corredores, id_carrera, setExitoCarr, admin}) {
     const [showEdit, setShowEdit] = useState(false);
     const carreraInfo={
       id_carrera,
       nombre_carrera,
       fecha,
       corredores,
+    }
+
+    const eliminarCarrera= async()=>{
+      const id=id_carrera;
+      console.log(id)
+
+      let respuesta= await fetch("http://localhost:4000/borrarCarrera",{
+            method:'delete',
+            headers:{
+                'Content-Type':"application/json"
+            },
+            body: JSON.stringify({ id_carrera: id })
+            
+        })
+        .then((data)=>{return data.json()})
+        .then(()=> setExitoCarr(true))
+        .then(()=>setTimeout(() => {
+          setExitoCarr(false);
+        }, 2000))
+        .catch((err)=>console.log(err));
+       return respuesta
     }
 
     const editarCarrera =()=>{
@@ -38,9 +59,12 @@ export default function CarreraCard({nombre_carrera, fecha, corredores, id_carre
                     </ul>
 
                     <div className="edit-delete-info">
-                    <button onClick={() => { setShowEdit(true); editarCarrera()}} className="btn-del align-self-end">
+                    <button onClick={() => { setShowEdit(true); editarCarrera()}} className={admin ? "btn-del align-self-end d-block" : "btn-del align-self-end d-none"}>
                             <i className="bi bi-pencil-square"></i>
-                        </button>
+                    </button>
+                    <button onClick={() => {eliminarCarrera();}} className={admin ? "btn-del align-self-end d-block" : "btn-del align-self-end d-none"}>
+                            <i className="bi bi-trash3"></i>
+                      </button>
                     </div>
                 </div>
             </div>

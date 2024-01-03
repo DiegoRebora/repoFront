@@ -1,11 +1,19 @@
 import './home.css';
 import Nav from '../../components/Nav/nav.js'
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 
-function Home() {
+function Home({admin, setAdmin}) {
+
+useEffect(() => {
+    if (admin) {
+      
+      alert('Welcome, Admin!');
+    }
+  }, [admin]);
+console.log(admin)
     return ( 
 <Fragment>
-  <Nav itemMenu={"Home"}/>      
+  <Nav itemMenu={"Home"} admin={admin} setAdmin={setAdmin}/>      
     <div className="home">
         <header className="home-header  container-fluid d-flex flex-column">
                 <h1 className="home-title row justify-content-center">Bienvenido a Suyai Racing Championship</h1>
@@ -15,7 +23,7 @@ function Home() {
         <div id="fotoleon" className="col-md-6 col-sm-12">
                     <img src="/images/leon1.jpg" alt="imagenleon"/>
         </div>
-                 
+             
         </main>
     </div>  
 </Fragment>   )

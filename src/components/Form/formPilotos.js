@@ -2,10 +2,11 @@ import "../Card/card.css"
 import "./formPilotos.css"
 import {Fragment, useState, useEffect} from "react";
 
-export default  function FormPilotos ({setExito}) {
-    const [showForm, setShowForm] = useState(true)
+export default  function FormPilotos ({setExito, setShowForm, setShow}) {
+    
     const[metodo, setMetodo] = useState(" ") 
     const [formData, setFormData] = useState({})
+    const [showForm, setShowFormLocal] = useState(true);
 
 const cargarPiloto=async(e)=>{
     e.preventDefault();
@@ -15,7 +16,7 @@ const cargarPiloto=async(e)=>{
 
     if (metodo === "post"){
         formInfo= new FormData(e.target)
-        console.log(e)
+        
         const img=e.target[5].value
         formInfo.append("imagen",img)
         console.log(formInfo)
@@ -43,6 +44,8 @@ const cargarPiloto=async(e)=>{
     .then((data)=>{console.log(data);
         if (metodo === "put"){localStorage.removeItem("infoPiloto")};
     })
+    .then(()=> {setShow(false)})
+    .then(()=> {setShowForm(false)})
     .then(()=> {setExito(true);
      setTimeout(() => {
         setExito(false);
@@ -74,7 +77,7 @@ const cargarPiloto=async(e)=>{
             
           
             <form className="formpilotos d-flex flex-column w-25 gap-2"  onSubmit={(event)=>cargarPiloto(event)}>
-            <button className= "btn btn-active d-flex align-self-end m-2 btn-x-sm" onClick={()=>{setShowForm(false); localStorage.removeItem("infoPiloto");}}>X</button>
+            <button className= "btn btn-active d-flex align-self-end m-2 btn-x-sm" onClick={()=>{ localStorage.removeItem("infoPiloto"); setShowForm(false); setShow(false)}}>X</button>
             <label htmlFor="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" value={formData.nombre} onChange={(event)=>cambioValor(event)}/>
             

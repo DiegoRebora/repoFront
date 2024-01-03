@@ -5,6 +5,11 @@ ul{
    color:var(--colorOrange);
 
 }
+.form input {
+    width: 50%;
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
+}
 
 header{
     padding: 20px;

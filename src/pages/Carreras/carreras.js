@@ -5,7 +5,7 @@ import "./carreras.css"
 import CarreraCard from '../../components/Card/carreraCard.js';
 import FormCarreras from '../../components/Form/formCarreras.js';
 
-export default function Carreras() {
+export default function Carreras({admin, setAdmin}) {
 
     const [carreras, setCarreras] = useState([]);
     const [show, setShow] = useState(false);
@@ -34,13 +34,13 @@ export default function Carreras() {
     return(
         <Fragment>
          
-        <Nav itemMenu={"Carreras"}/>
+        <Nav itemMenu={"Carreras"} admin={admin} setAdmin={setAdmin}/>
             { exitoCarr === false? (
             <main className='container-fluid carreras-div'>
                 <h2 className="titulo row suyai-text justify-content-center align-items-center py-5">Carreras</h2>
                 <section className="row section-cards">
                 <div className="formulario d-flex flex-column w-100 justify-content-center align-items-center">
-                <button onClick={()=> {setShow(!show); localStorage.removeItem("infoCarrera");}} className="agregar btn-del p-2 ">Agregar Carrera</button>
+                <button onClick={()=> {setShow(!show); localStorage.removeItem("infoCarrera");}} className={admin? "agregar btn-del p-2 d-block": "agregar btn-del p-2 d-none"}>Agregar Carrera</button>
                   {show? <FormCarreras setExitoCarr={setExitoCarr}/> : ''}
                </div>
                     {carreras.map((carrera) => (
@@ -51,6 +51,8 @@ export default function Carreras() {
                         fecha={carrera.fecha}
                         corredores={carrera.corredores}
                         setExitoCarr={setExitoCarr}
+                        
+                        admin={admin}
                         />
                     ))}
                 </section>

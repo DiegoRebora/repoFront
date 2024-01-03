@@ -3,9 +3,9 @@ import InfoCard from '../InfoCard/infocard'
 import { useState, Fragment } from 'react'
 import FormPilotos from "../Form/formPilotos"
 
-export default function Card({ id_piloto, nombre, apellido, edad, apodo, img, setExito}) {
+export default function Card({ id_piloto, nombre, apellido, edad, apodo, img, setExito, showForm, setShowForm, setShow, admin, setAdmin}) {
     const [showInfo, setShowInfo] = useState(false)
-    const [showForm, setShowForm] = useState(false)
+    const [showFormCard, setShowFormCard] = useState(false)
     const pilotoInfo= {
       id_piloto,
       nombre,
@@ -31,34 +31,31 @@ export default function Card({ id_piloto, nombre, apellido, edad, apodo, img, se
      return respuesta
   }
   const editarPiloto =()=>{
-    localStorage.setItem("infoPiloto", JSON.stringify(pilotoInfo))
+    localStorage.setItem("infoPiloto", JSON.stringify(pilotoInfo));
+    setShowForm(true);
+    setShowFormCard(true)
 }
-
+console.log(admin)
 
     return(
       <Fragment>                        
-        {showForm ? 
-        (<FormPilotos setExito={setExito} />)
-     : (
+       {showFormCard && (
+        <FormPilotos setExito={setExito} setShowForm={setShowForm} setShowFormCard={setShowFormCard} setShow={setShow}/>
+      )}
+      {!showFormCard && (
+
         <div className="card m-2 p-2 d-flex flex-row justify-content-between align-items-center">
           <div className="d-flex flex-column justify-content-between align-items-center">
             <img src={img}  className="img-fluid img-card" alt="imagen-piloto"/>
             <h2 className="text-center text-card">{nombre} {apellido}</h2>
             <div className="edit-delete-info">
                         <button onClick={() => setShowInfo(true)} className={showInfo ? "btn-info align-self-end d-none" : "btn-info align-self-end more d-block"}>+ INFO</button>
-                        <button onClick={() => {eliminarPiloto(); setTimeout(()=>{setExito(true);},0);}}className="btn-del align-self-end">
+                        <button onClick={() => {eliminarPiloto(); setTimeout(()=>{setExito(true);},0);}}className={admin ? "btn-del align-self-end d-block": "btn-del align-self-end d-none"}>
                             <i className="bi bi-trash3"></i>
                         </button>
-                        <button onClick={() => { setShowForm(true); editarPiloto()}} className="btn-del align-self-end">
+                        <button onClick={() => { setShowForm(true); editarPiloto();}} className={admin ? "btn-del align-self-end d-block": "btn-del align-self-end d-none"}>
                             <i className="bi bi-pencil-square"></i>
                         </button>
-                        {showForm ? 
-                          (<FormPilotos setExito={setExito}/>
-
-                            )
-                         : ""
-
-                        }
                     </div>
                 </div>
                 <div>
