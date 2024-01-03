@@ -19,7 +19,7 @@ const cargarPiloto=async(e)=>{
         
         const img=e.target[5].value
         formInfo.append("imagen",img)
-        console.log(formInfo)
+ 
 
         fetchConfig={
             method:metodo,
@@ -30,7 +30,7 @@ const cargarPiloto=async(e)=>{
     if (metodo === "put"){
         formInfo=JSON.stringify(formData)
         id_piloto = formData.id_piloto
-        console.log(formInfo)
+
         fetchConfig={
             method:metodo,
             headers:{"Content-type": "application/json"},
@@ -66,7 +66,6 @@ const cargarPiloto=async(e)=>{
             setMetodo("put")
             pilotoData=JSON.parse(pilotoData)
             setFormData(pilotoData)
-            console.log(pilotoData)
         }},[])
 
 

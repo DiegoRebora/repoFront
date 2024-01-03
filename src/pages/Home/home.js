@@ -10,7 +10,7 @@ useEffect(() => {
       alert('Welcome, Admin!');
     }
   }, [admin]);
-console.log(admin)
+
     return ( 
 <Fragment>
   <Nav itemMenu={"Home"} admin={admin} setAdmin={setAdmin}/>      

@@ -13,8 +13,7 @@ const cargarCarrera=async(e)=>{
 
     if (metodo === "post"){
         formInfo=JSON.stringify(formData)
-        console.log(e)
-        console.log(formInfo)
+
 
         fetchConfig={
             method:metodo,
@@ -26,7 +25,7 @@ const cargarCarrera=async(e)=>{
     if (metodo === "put"){
         formInfo=JSON.stringify(formData)
         id_carrera = formData.id_carrera
-        console.log(formInfo)
+
         fetchConfig={
             method:metodo,
             headers:{"Content-type": "application/json"},
@@ -61,7 +60,6 @@ const cargarCarrera=async(e)=>{
             setMetodo("put")
             carreraData=JSON.parse(carreraData)
             setFormData(carreraData)
-            console.log(carreraData)
         }},[])
 
     return (

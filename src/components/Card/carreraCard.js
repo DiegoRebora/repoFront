@@ -13,7 +13,7 @@ export default function CarreraCard({nombre_carrera, fecha, corredores, id_carre
 
     const eliminarCarrera= async()=>{
       const id=id_carrera;
-      console.log(id)
+ 
 
       let respuesta= await fetch("http://localhost:4000/borrarCarrera",{
             method:'delete',

@@ -22,9 +22,9 @@ const logIn = async (e) => {
       let respuesta = await fetch(`http://localhost:4000/usuario/login`, fetchConfig);
       let data = await respuesta.json();
 
-      console.log(data);
+   
       token=data.token;
-      console.log(token)
+   
   
       if (token.length > 0) {
         setAdmin(true);
@@ -36,7 +36,7 @@ const logIn = async (e) => {
     console.error(err);
   }
 };
-console.log(admin)
+
     return(
     <header className="bg-dark">
       <nav className="navbar navbar-expand-lg w-100 bg-blue justify-content-between">

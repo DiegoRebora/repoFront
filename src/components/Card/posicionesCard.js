@@ -1,7 +1,7 @@
 import './card.css'
 
 export default function PosicionesCard({id_piloto, nombre_piloto, puntaje_total }) {
-    console.log("PosicionesCard props:", { id_piloto, nombre_piloto, puntaje_total });
+    
 
 
 

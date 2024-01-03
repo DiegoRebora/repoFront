@@ -34,7 +34,7 @@ export default function Pilotos({admin, setAdmin}) {
   
     fetchData();
   }, [exito]);
-  console.log(admin)
+ 
 
 
   return (

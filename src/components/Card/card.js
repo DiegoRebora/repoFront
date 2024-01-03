@@ -35,7 +35,7 @@ export default function Card({ id_piloto, nombre, apellido, edad, apodo, img, se
     setShowForm(true);
     setShowFormCard(true)
 }
-console.log(admin)
+
 
     return(
       <Fragment>                        
