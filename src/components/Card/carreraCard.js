@@ -15,7 +15,7 @@ export default function CarreraCard({nombre_carrera, fecha, corredores, id_carre
       const id=id_carrera;
  
 
-      let respuesta= await fetch("http://localhost:4000/borrarCarrera",{
+      let respuesta= await fetch("https://suyairacing.onrender.com/borrarCarrera",{
             method:'delete',
             headers:{
                 'Content-Type':"application/json"

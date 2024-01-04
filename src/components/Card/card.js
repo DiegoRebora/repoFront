@@ -15,7 +15,7 @@ export default function Card({ id_piloto, nombre, apellido, edad, apodo, img, se
     }
     const eliminarPiloto= async()=>{
     const id=id_piloto;
-    let respuesta= await fetch("http://localhost:4000/borrarPiloto",{
+    let respuesta= await fetch("https://suyairacing.onrender.com/borrarPiloto",{
           method:'delete',
           headers:{
               'Content-Type':"application/json"

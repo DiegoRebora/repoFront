@@ -21,7 +21,7 @@ useEffect(() => {
        </header>
         <main className="home-main container-fluid d-flex flex-column justify-content-center align-items-center">
         <div id="fotoleon" className="col-md-6 col-sm-12">
-                    <img src="/images/leon1.jpg" alt="imagenleon"/>
+                    <img src="./images/leon1.jpg" alt="imagenleon"/>
         </div>
              
         </main>

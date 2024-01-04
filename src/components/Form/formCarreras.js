@@ -33,7 +33,7 @@ const cargarCarrera=async(e)=>{
         }
 
     } 
-    let respuesta=await fetch(`http://localhost:4000/cargarCarrera/${id_carrera}`, fetchConfig)
+    let respuesta=await fetch(`https://suyairacing.onrender.com/cargarCarrera/${id_carrera}`, fetchConfig)
     
     .then((resp)=>{resp.json()})
     .then((data)=>{console.log(data);

@@ -14,7 +14,7 @@ export default function Carreras({admin, setAdmin}) {
     useEffect(() => {
         const fetchCarreras = async () => {
           try {
-            const response = await fetch("http://localhost:4000/carreras");
+            const response = await fetch("https://suyairacing.onrender.com/carreras");
             const data = await response.json();
       
             setCarreras(data);

@@ -38,7 +38,7 @@ const cargarPiloto=async(e)=>{
         }
 
     } 
-    let respuesta=await fetch(`http://localhost:4000/cargarPiloto/${id_piloto}`, fetchConfig)
+    let respuesta=await fetch(`https://suyairacing.onrender.com/cargarPiloto/${id_piloto}`, fetchConfig)
     
     .then((resp)=>{resp.json()})
     .then((data)=>{console.log(data);

@@ -12,7 +12,7 @@ export default function Pilotos({admin, setAdmin}) {
 
   const fetchPilotos = async () => {
     try {
-      const response = await fetch("http://localhost:4000/");
+      const response = await fetch("https://suyairacing.onrender.com/");
       const data = await response.json();
       return data;
     } catch (err) {

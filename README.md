@@ -69,27 +69,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 --------------------------------------------
-1.PARA SEGUIR: 
-1.1. BASICO PARA CUMPLIR:
-    -Funcionalidades: cargar y editar
-         Ver tema formData y target en el formulario del post de la carrera. NO ANDA, SHORO
-1.2 AVANZADO: 
-    -Configurar JWT para que el admin solo vea los botones del CRUD.  //HEEEECHOOOO -- FALTA EL FRONT, AGREGAR FORMULARIOS
-    DE LOGGEO Y DE REGISTRO.--- FALTA TODO ESTO
-
---------------SECUNDARIO- ESTILOS
 
 
+SOLO FALTA EL 
  DEPLOY :
 
 
--Crear archivo por .env (a la hora aprox, de la última clase)
+-Crear archivo por .env (a la hora aprox, de la última clase) hecho
 -Subir API (const port=process.env.PORT || 4000) Utilizar Render --Built command = $ npm install // 
 Start command: node server.js// Dentro de render, en "envirorment" cargamos la varibale de entorno. 
 Después voy a "Logs" --MANUAL DEPLOY//
 Luego, en las peticiones, ponemos la dirección del endpoint que nos dio la API. 
 Lo mismo, con las imagenes, hay que cambiarle todas las direcciónes
 --DEPLOY DE API -- NETLIFY - POST BREAK ÚLTIMA CLASE. 
---OPCIONALES:
 
-    -Carrera: Que muestre las posiciones o al menos el podio. Se puede, con un Json.
+---------BORRAR CONSOLE LOGS API. 

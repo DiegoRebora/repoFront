@@ -11,7 +11,7 @@ export default function Posiciones() {
     useEffect(() => {
         const fetchPosiciones = async () => {
           try {
-            const response = await fetch("http://localhost:4000/tablaGeneral");
+            const response = await fetch("https://suyairacing.onrender.com/tablaGeneral");
             const data = await response.json();
             console.log("Received data", data);
             setPosiciones(data);
