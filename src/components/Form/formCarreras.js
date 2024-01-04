@@ -32,7 +32,7 @@ const cargarCarrera=async(e)=>{
             body:formInfo,
         }
 
-    } 
+    } // eslint-disable-next-line
     let respuesta=await fetch(`https://suyairacing.onrender.com/cargarCarrera/${id_carrera}`, fetchConfig)
     
     .then((resp)=>{resp.json()})
@@ -43,7 +43,7 @@ const cargarCarrera=async(e)=>{
     .then(()=>setTimeout(() => {
         setExitoCarr(false);
       }, 2000))
-    
+
 
     .catch((err)=>console.log(err))
 }

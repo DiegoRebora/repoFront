@@ -3,7 +3,7 @@ import InfoCard from '../InfoCard/infocard'
 import { useState, Fragment } from 'react'
 import FormPilotos from "../Form/formPilotos"
 
-export default function Card({ id_piloto, nombre, apellido, edad, apodo, img, setExito, showForm, setShowForm, setShow, admin, setAdmin}) {
+export default function Card({ id_piloto, nombre, apellido, edad, apodo, img, setExito, setShowForm, setShow, admin}) {
     const [showInfo, setShowInfo] = useState(false)
     const [showFormCard, setShowFormCard] = useState(false)
     const pilotoInfo= {

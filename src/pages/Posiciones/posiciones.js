@@ -21,7 +21,7 @@ export default function Posiciones() {
         };
     
         fetchPosiciones();  
-        console.log(posiciones)
+        console.log(posiciones)// eslint-disable-next-line
       }, []);
 
       useEffect(() => {

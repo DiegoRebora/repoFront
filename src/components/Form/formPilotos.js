@@ -5,9 +5,8 @@ import {Fragment, useState, useEffect} from "react";
 export default  function FormPilotos ({setExito, setShowForm, setShow}) {
     
     const[metodo, setMetodo] = useState(" ") 
-    const [formData, setFormData] = useState({})
+    const [formData, setFormData] = useState({})// eslint-disable-next-line
     const [showForm, setShowFormLocal] = useState(true);
-
 const cargarPiloto=async(e)=>{
     e.preventDefault();
     let id_piloto= "";
@@ -37,7 +36,7 @@ const cargarPiloto=async(e)=>{
             body:formInfo,
         }
 
-    } 
+    } // eslint-disable-next-line
     let respuesta=await fetch(`https://suyairacing.onrender.com/cargarPiloto/${id_piloto}`, fetchConfig)
     
     .then((resp)=>{resp.json()})
@@ -50,9 +49,9 @@ const cargarPiloto=async(e)=>{
      setTimeout(() => {
         setExito(false);
       }, 2000)})
-
     .catch((err)=>console.log(err))
 }
+
     
     const cambioValor=(e)=>{
         setFormData({...formData,[e.target.name]:e.target.value})

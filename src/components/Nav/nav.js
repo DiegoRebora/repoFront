@@ -1,7 +1,7 @@
 import './nav.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
+// eslint-disable-next-line
 export default function Nav({ itemMenu, admin, setAdmin }) {
   const [login, setLogin] = useState(false);
 
