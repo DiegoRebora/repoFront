@@ -71,16 +71,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 --------------------------------------------
 
 
-SOLO FALTA EL 
- DEPLOY :
-
-
--Crear archivo por .env (a la hora aprox, de la última clase) hecho
--Subir API (const port=process.env.PORT || 4000) Utilizar Render --Built command = $ npm install // 
-Start command: node server.js// Dentro de render, en "envirorment" cargamos la varibale de entorno. 
-Después voy a "Logs" --MANUAL DEPLOY//
-Luego, en las peticiones, ponemos la dirección del endpoint que nos dio la API. 
-Lo mismo, con las imagenes, hay que cambiarle todas las direcciónes
---DEPLOY DE API -- NETLIFY - POST BREAK ÚLTIMA CLASE. 
-
----------BORRAR CONSOLE LOGS API. 
